@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('practicetwo', function (Blueprint $table) {
+        Schema::create('libf', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('red',100)->unique();
-            $table->string('orange');
-            $table->string('blue');
-            $table->string('purple');
-            $table->string('brown');
-            $table->string('pink');
-
+            $table->string('status');
+            $table->string('number');
+            $table->string('addres');
+            $table->string('phone');
+            $table->string('city');
+            $table->string('name');
+            $table->string('parents');
+            $table->geometry('positions');
         });
     }
 
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('practicetwo');
+        Schema::dropIfExists('libf');
     }
 };
